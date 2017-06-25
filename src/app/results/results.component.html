@@ -1,3 +1,5 @@
-<p>
-  results works!
-</p>
+<ul>
+  <li *ngFor="let movie of movies">
+    {{movie.title}}: {{movie.release_date}}
+  </li>
+</ul>

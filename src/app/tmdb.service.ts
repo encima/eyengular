@@ -39,7 +39,16 @@ export class TmdbService {
     ro.params = search_params;
     const url = this.ROOT_URL + 'search/movie';
     return this.http.get(url, ro).map(response => {
-      this.movies = response.json();
+      let movies = response.json();
+      movies['results'].map(movie => {
+        movie['poster_path'] = this.config['images']['base_url'] + this.config['images']['poster_sizes'][4] + movie['poster_path'];
+      },() => {
+        // this.movies = movies;
+        console.log(this.movies);
+      });
+      this.movies = movies;
+      console.log(movies);
+      
     });
   }
 

@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { ResultsComponent } from './results/results.component';
 import { SearchComponent } from './search/search.component';
 
-import {InputTextModule} from 'primeng/primeng';
+import {InputTextModule, DataGridModule} from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import {InputTextModule} from 'primeng/primeng';
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    InputTextModule
+    InputTextModule,
+    DataGridModule
   ],
   providers: [TmdbService],
   bootstrap: [AppComponent]
