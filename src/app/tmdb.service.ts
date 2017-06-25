@@ -3,6 +3,8 @@ import { Headers, Http, Response,  RequestOptions, URLSearchParams } from '@angu
 import { Observable } from 'rxjs/Observable';
 import { Subject }    from 'rxjs/Subject';
 
+import { environment } from '../environments/environment';
+
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
@@ -12,7 +14,7 @@ import 'rxjs/add/operator/switchMap';
 @Injectable()
 export class TmdbService {
 
-  KEY = '4cddc3f8f8a7d55bfdf9a90a97ded0e5';
+  KEY = '';
   ROOT_URL = 'https://api.themoviedb.org/3/';
   CONFIG_ENDPOINT = 'configuration';
 
@@ -22,6 +24,7 @@ export class TmdbService {
   movies = {};
 
   constructor(private http: Http) {
+    this.KEY = environment.TMDB_KEY;
     this.configure();
     this.params.set('api_key', this.KEY);
   }
