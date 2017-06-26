@@ -9,20 +9,19 @@ import { AppComponent } from './app.component';
 import { ResultsComponent } from './results/results.component';
 import { SearchComponent } from './search/search.component';
 
-import {InputTextModule, DataGridModule} from 'primeng/primeng';
+import { MovieViewComponent } from './movie-view/movie-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResultsComponent,
-    SearchComponent
+    SearchComponent,
+    MovieViewComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule,
-    InputTextModule,
-    DataGridModule
+    AppRoutingModule
   ],
   providers: [TmdbService],
   bootstrap: [AppComponent]
