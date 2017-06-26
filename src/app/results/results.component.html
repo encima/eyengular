@@ -1,5 +1,6 @@
-<ul>
-  <li *ngFor="let movie of movies">
-    {{movie.title}}: {{movie.release_date}}
-  </li>
-</ul>
+<hr/>
+<div class="ui four column grid">
+  <ng-container *ngFor="let movie of movies; let index = index; let last = last">
+      <app-movie-view [movie]="movie"></app-movie-view>
+  </ng-container>
+</div>
