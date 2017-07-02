@@ -8,7 +8,6 @@ import { TmdbService } from './tmdb.service';
 import { AppComponent } from './app.component';
 import { ResultsComponent } from './results/results.component';
 import { SearchComponent } from './search/search.component';
-
 import { MovieViewComponent } from './movie-view/movie-view.component';
 
 @NgModule({

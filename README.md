@@ -1,5 +1,15 @@
 # Eyengular
 
+## Initial Steps
+
+1. If you do not have an account with TMDB, sign up and retrieve your key from the settings page
+2. Add the key to the `environment.ts` file and rename it
+3. Run `npm install`
+4. Run `ng serve`
+
+Other commands are available in `package.json`.  The rest of the contents of this file below have been auto generated.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
 
 ## Development server
