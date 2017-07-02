@@ -2,7 +2,8 @@
 
 * Create template for individual movie view
 * Link to TMDB pages
-* Include images of movies (posters)
+* Existing test cases should pass
+* Clean up grid layout
 * Tests for search and results components
-* Create some simple tests for the other to complete
-* JS Doc
+* Create some simple tests
+* JS Doc for methods that do not have it
