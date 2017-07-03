@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { ResultsComponent } from './results/results.component';
 import { SearchComponent } from './search/search.component';
 import { MovieViewComponent } from './movie-view/movie-view.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResultsComponent,
     SearchComponent,
-    MovieViewComponent
+    MovieViewComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
