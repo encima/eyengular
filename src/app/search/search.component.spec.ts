@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {NO_ERRORS_SCHEMA} from '@angular/core';
 import { SearchComponent } from './search.component';
+import { TmdbService } from '../tmdb.service';
+import { MockTmdbService } from '../MockStubs';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -8,9 +10,17 @@ describe('SearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      schemas: [NO_ERRORS_SCHEMA],
       declarations: [ SearchComponent ]
+    });
+    TestBed.overrideComponent(SearchComponent, {
+      set: {
+        providers: [
+          {provide: TmdbService, useClass: MockTmdbService}
+        ]
+      }
     })
-    .compileComponents();
+    TestBed.compileComponents();
   }));
 
   beforeEach(() => {

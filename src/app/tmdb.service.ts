@@ -50,7 +50,7 @@ export class TmdbService {
           // almost definitely not allowed. Fix?
           movie['poster_path'] = 'https://cdn.amctheatres.com/Media/Default/Images/noposter.jpg';
         }
-      },() => {
+      }, () => {
         // this.movies = movies;
         console.log(this.movies);
       });
@@ -64,6 +64,7 @@ export class TmdbService {
       const ro = new RequestOptions();
       ro.params = this.params;
       return this.http.get(url).subscribe(res => {
+        // console.log(res);
         this.config = res.json();
         console.log(this.config);
       });

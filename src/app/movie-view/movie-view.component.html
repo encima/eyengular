@@ -1,5 +1,5 @@
 <div class='column'>
-  <div class='ui raised segment movie-container'>
+  <div class='ui raised segment movie-container' *ngIf="movie">
     <img src="{{movie.poster_path}}" class="poster"/>
     <p>{{movie.title}}</p>
   </div>
